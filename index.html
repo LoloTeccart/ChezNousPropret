@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chez Nous Propreté | Nettoyage Professionnel Montréal</title>
+    <meta name="description" content="Service de nettoyage résidentiel et commercial à Montréal. Satisfaction garantie, équipe professionnelle, produits écologiques.">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2596be',
+                        secondary: '#1e3a8a',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="flex items-center">
+                <span class="text-2xl font-bold text-primary">Chez Nous</span>
+                <span class="text-2xl font-bold text-secondary">Propreté</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-700 hover:text-primary transition">Services</a>
+                <a href="#pricing" class="text-gray-700 hover:text-primary transition">Tarifs</a>
+                <a href="#about" class="text-gray-700 hover:text-primary transition">À propos</a>
+                <a href="#faq" class="text-gray-700 hover:text-primary transition">FAQ</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+15141234567" class="hidden md:flex items-center text-gray-700 hover:text-primary">
+                    <i data-feather="phone" class="mr-2"></i> 514-123-4567
+                </a>
+                <a href="#devis" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition flex items-center">
+                    <i data-feather="edit" class="mr-2"></i> Devis Gratuit
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#services" class="text-gray-700 hover:text-primary transition py-2">Services</a>
+                <a href="#pricing" class="text-gray-700 hover:text-primary transition py-2">Tarifs</a>
+                <a href="#about" class="text-gray-700 hover:text-primary transition py-2">À propos</a>
+                <a href="#faq" class="text-gray-700 hover:text-primary transition py-2">FAQ</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition py-2">Contact</a>
+                <a href="tel:+15141234567" class="text-gray-700 hover:text-primary transition py-2 flex items-center">
+                    <i data-feather="phone" class="mr-2"></i> 514-123-4567
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Votre espace, notre expertise</h1>
+                <p class="text-xl mb-8">Service de nettoyage professionnel résidentiel et commercial à Montréal. Satisfaction garantie ou retouche gratuite.</p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href="#devis" class="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition text-center">
+                        Obtenir un devis
+                    </a>
+                    <a href="tel:+15141234567" class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-primary transition text-center flex items-center justify-center">
+                        <i data-feather="phone" class="mr-2"></i> Appeler maintenant
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="http://static.photos/cleaning/640x360" alt="Équipe de nettoyage professionnelle" class="rounded-lg shadow-xl w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12">
+                <div class="flex items-center">
+                    <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+                    <span>Satisfaction garantie</span>
+                </div>
+                <div class="flex items-center">
+                    <i data-feather="shield" class="text-blue-500 mr-2"></i>
+                    <span>Assuré et certifié</span>
+                </div>
+                <div class="flex items-center">
+                    <i data-feather="leaf" class="text-green-600 mr-2"></i>
+                    <span>Produits écologiques</span>
+                </div>
+                <div class="flex items-center">
+                    <i data-feather="clock" class="text-primary mr-2"></i>
+                    <span>Disponible 7/7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="http://static.photos/residential/640x360" alt="Nettoyage résidentiel" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Résidentiel</h3>
+                        <p class="text-gray-600 mb-4">Nettoyage complet de votre domicile, appartement ou condo. Adapté à vos besoins et horaires.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Nettoyage régulier</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Nettoyage en profondeur</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Après déménagement</span>
+                            </li>
+                        </ul>
+                        <a href="#devis" class="text-primary font-medium flex items-center">
+                            Demander un devis <i data-feather="arrow-right" class="ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="http://static.photos/office/640x360" alt="Nettoyage commercial" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Commercial</h3>
+                        <p class="text-gray-600 mb-4">Services professionnels pour bureaux, commerces et espaces professionnels.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Bureaux</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Commerces de détail</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Cliniques médicales</span>
+                            </li>
+                        </ul>
+                        <a href="#devis" class="text-primary font-medium flex items-center">
+                            Demander un devis <i data-feather="arrow-right" class="ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="http://static.photos/vacation/640x360" alt="Nettoyage Airbnb" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Airbnb & Locations</h3>
+                        <p class="text-gray-600 mb-4">Service spécialisé pour propriétaires Airbnb et locations saisonnières.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Nettoyage entre locataires</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Linge inclus</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Service express disponible</span>
+                            </li>
+                        </ul>
+                        <a href="#devis" class="text-primary font-medium flex items-center">
+                            Demander un devis <i data-feather="arrow-right" class="ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section id="devis" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-primary text-white p-8 flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold mb-4">Demandez un devis gratuit</h2>
+                        <p class="mb-6">Remplissez ce formulaire et nous vous contacterons dans les plus brefs délais avec une estimation personnalisée.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i data-feather="check-circle" class="text-white mr-3"></i>
+                                <span>Sans engagement</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="check-circle" class="text-white mr-3"></i>
+                                <span>Réponse sous 24h</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-feather="check-circle" class="text-white mr-3"></i>
+                                <span>Prix transparents</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <form id="quote-form" class="space-y-4">
+                            <div>
+                                <label for="service-type" class="block text-gray-700 mb-2">Type de service</label>
+                                <select id="service-type" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="residential">Résidentiel</option>
+                                    <option value="commercial">Commercial</option>
+                                    <option value="airbnb">Airbnb/Location</option>
+                                    <option value="move">Après déménagement</option>
+                                    <option value="construction">Après travaux</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="postal-code" class="block text-gray-700 mb-2">Code postal</label>
+                                <input type="text" id="postal-code" placeholder="H3A 1A1" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div>
+                                <label for="property-size" class="block text-gray-700 mb-2">Taille du logement</label>
+                                <select id="property-size" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="">Nombre de pièces</option>
+                                    <option value="studio">Studio</option>
+                                    <option value="3.5">3½</option>
+                                    <option value="4.5">4½</option>
+                                    <option value="5.5">5½</option>
+                                    <option value="6+">6½ et plus</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="frequency" class="block text-gray-700 mb-2">Fréquence</label>
+                                <select id="frequency" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="once">Une fois</option>
+                                    <option value="weekly">Hebdomadaire</option>
+                                    <option value="biweekly">Bi-hebdomadaire</option>
+                                    <option value="monthly">Mensuel</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-secondary transition flex items-center justify-center">
+                                <i data-feather="send" class="mr-2"></i> Envoyer la demande
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Tarifs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:border-primary transition">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-center">Basique</h3>
+                        <p class="text-gray-600 text-center mb-6">Pour un nettoyage léger et rapide</p>
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-primary">$80+</span>
+                            <span class="text-gray-500">/visite</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Nettoyage des surfaces</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Balayage et lavage des sols</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Dépoussiérage</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="x" class="text-gray-400 mr-2"></i>
+                                <span class="text-gray-400">Salle de bain</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="x" class="text-gray-400 mr-2"></i>
+                                <span class="text-gray-400">Cuisine</span>
+                            </li>
+                        </ul>
+                        <a href="#devis" class="block w-full bg-gray-100 text-primary py-3 rounded-lg font-medium text-center hover:bg-gray-200 transition">
+                            Choisir ce plan
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Standard Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-primary transform scale-105 z-10">
+                    <div class="bg-primary text-white text-center py-2">
+                        <span class="font-medium">Le plus populaire</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-center">Standard</h3>
+                        <p class="text-gray-600 text-center mb-6">Nettoyage complet pour la plupart des besoins</p>
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-primary">$120+</span>
+                            <span class="text-gray-500">/visite</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Tout inclus dans Basique</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Nettoyage salle de bain</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Nettoyage cuisine</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Changement de literie</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="x" class="text-gray-400 mr-2"></i>
+                                <span class="text-gray-400">Intérieur frigo/armoires</span>
+                            </li>
+                        </ul>
+                        <a href="#devis" class="block w-full bg-primary text-white py-3 rounded-lg font-medium text-center hover:bg-secondary transition">
+                            Choisir ce plan
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:border-primary transition">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-center">Premium</h3>
+                        <p class="text-gray-600 text-center mb-6">Nettoyage en profondeur complet</p>
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-primary">$180+</span>
+                            <span class="text-gray-500">/visite</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Tout inclus dans Standard</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Intérieur frigo/armoires</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Nettoyage des fenêtres</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Détachage des surfaces</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-primary mr-2"></i>
+                                <span>Désinfection complète</span>
+                            </li>
+                        </ul>
+                        <a href="#devis" class="block w-full bg-gray-100 text-primary py-3 rounded-lg font-medium text-center hover:bg-gray-200 transition">
+                            Choisir ce plan
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p class="text-gray-600">* Prix indicatifs pour un appartement 4½. Contactez-nous pour un devis personnalisé.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">À propos de Chez Nous Propreté</h2>
+                    <p class="text-gray-700 mb-4">Fondée en 2015 à Montréal, Chez Nous Propreté est une entreprise locale spécialisée dans les services de nettoyage résidentiel et commercial.</p>
+                    <p class="text-gray-700 mb-6">Notre mission est de fournir un service exceptionnel avec une attention aux détails qui fait la différence. Nous croyons qu'un environnement propre contribue à une meilleure qualité de vie et à une productivité accrue.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i data-feather="users" class="text-primary mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold">Équipe professionnelle</h4>
+                                <p class="text-gray-600">Nos employés sont formés, vérifiés et assurés pour votre tranquillité d'esprit.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="shield" class="text-primary mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold">Assurance responsabilité</h4>
+                                <p class="text-gray-600">Nous sommes pleinement assurés pour protéger votre propriété.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="heart" class="text-primary mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold">Engagement qualité</h4>
+                                <p class="text-gray-600">Satisfaction garantie ou nous revenons gratuitement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="http://static.photos/team/400x300" alt="Notre équipe" class="rounded-lg shadow-md">
+                        <img src="http://static.photos/cleaning/400x300" alt="Nettoyage professionnel" class="rounded-lg shadow-md">
+                        <img src="http://static.photos/eco/400x300" alt="Produits écologiques" class="rounded-lg shadow-md">
+                        <img src="http://static.photos/satisfaction/400x300" alt="Client satisfait" class="rounded-lg shadow-md">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Ce que nos clients disent</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="http://static.photos/people/80x80" alt="Client" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Marie D.</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Je fais appel à Chez Nous Propreté chaque semaine pour mon condo. L'équipe est toujours ponctuelle, professionnelle et fait un travail impeccable. Je recommande sans hésitation!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="http://static.photos/people/80x80/2" alt="Client" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Pierre L.</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Service exceptionnel pour notre bureau. Flexibles, fiables et toujours un nettoyage irréprochable. Nous avons essayé plusieurs entreprises avant de trouver Chez Nous Propreté et nous ne changerons plus!"</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img src="http://static.photos/people/80x80/3" alt="Client" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Sophie T.</h4>
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Parfait pour mon Airbnb! Ils s'adaptent à mes horaires variables et font toujours un travail minutieux. Les clients mentionnent souvent la propreté dans leurs commentaires. Un vrai plus pour ma location!"</p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="#" class="text-primary font-medium flex items-center justify-center">
+                    Voir plus d'avis <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Questions fréquentes</h2>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none">
+                        <span class="font-medium">Quels produits utilisez-vous pour le nettoyage?</span>
+                        <i data-feather="chevron-down" class="transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 hidden">
+                        <p class="text-gray-600">Nous utilisons principalement des produits écologiques certifiés, sans danger pour les enfants et les animaux domestiques. Pour les besoins spécifiques ou les taches tenaces, nous pouvons utiliser des produits professionnels en respectant les instructions du fabricant.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none">
+                        <span class="font-medium">Dois-je fournir l'équipement et les produits?</span>
+                        <i data-feather="chevron-down" class="transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 hidden">
+                        <p class="text-gray-600">Non, notre équipe arrive avec tout l'équipement et les produits nécessaires. Cependant, si vous préférez que nous utilisions vos propres produits, nous pouvons nous adapter à votre demande.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none">
+                        <span class="font-medium">Comment fonctionne la garantie de satisfaction?</span>
+                        <i data-feather="chevron-down" class="transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 hidden">
+                        <p class="text-gray-600">Si vous n'êtes pas entièrement satisfait du résultat, contactez-nous dans les 24 heures et nous reviendrons gratuitement pour corriger le problème. Votre satisfaction est notre priorité absolue.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none">
+                        <span class="font-medium">Quels sont vos horaires de service?</span>
+                        <i data-feather="chevron-down" class="transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 hidden">
+                        <p class="text-gray-600">Nous offrons des services 7 jours sur 7, de 7h à 21h. Pour les urgences en dehors de ces heures, contactez-nous et nous ferons de notre mieux pour répondre à votre demande.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="faq-question w-full text-left p-4 flex justify-between items-center focus:outline-none">
+                        <span class="font-medium">Comment se passe le premier rendez-vous?</span>
+                        <i data-feather="chevron-down" class="transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 hidden">
+                        <p class="text-gray-600">Lors de notre première visite, notre responsable effectuera une évaluation détaillée de vos besoins et discutera avec vous de vos attentes spécifiques. Cela nous permet de personnaliser notre service pour répondre parfaitement à vos besoins.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Gallery -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Avant & Après</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="relative group">
+                    <img src="http://static.photos/dirty/400x300" alt="Avant nettoyage" class="w-full h-64 object-cover rounded-lg">
+                    <img src="http://static.photos/clean/400x300" alt="Après nettoyage" class="absolute inset-0 w-full h-64 object-cover rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 rounded-b-lg">
+                        <span class="text-white font-medium">Cuisine</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="http://static.photos/dirty-bathroom/400x300" alt="Avant nettoyage" class="w-full h-64 object-cover rounded-lg">
+                    <img src="http://static.photos/clean-bathroom/400x300" alt="Après nettoyage" class="absolute inset-0 w-full h-64 object-cover rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 rounded-b-lg">
+                        <span class="text-white font-medium">Salle de bain</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="http://static.photos/dirty-office/400x300" alt="Avant nettoyage" class="w-full h-64 object-cover rounded-lg">
+                    <img src="http://static.photos/clean-office/400x300" alt="Après nettoyage" class="absolute inset-0 w-full h-64 object-cover rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 rounded-b-lg">
+                        <span class="text-white font-medium">Bureau</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="http://static.photos/dirty-living/400x300" alt="Avant nettoyage" class="w-full h-64 object-cover rounded-lg">
+                    <img src="http://static.photos/clean-living/400x300" alt="Après nettoyage" class="absolute inset-0 w-full h-64 object-cover rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 rounded-b-lg">
+                        <span class="text-white font-medium">Salon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Contactez-nous</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Contact Info -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-4">Coordonnées</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-feather="map-pin" class="text-primary mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium">Adresse</h4>
+                                    <p class="text-gray-600">123 Rue Propreté, Montréal, QC H3A 1A1</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="phone" class="text-primary mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium">Téléphone</h4>
+                                    <p class="text-gray-600">514-123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="mail" class="text-primary mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <p class="text-gray-600">info@cheznousproprete.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="clock" class="text-primary mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-medium">Heures d'ouverture</h4>
+                                    <p class="text-gray-600">Lundi - Dimanche: 7h - 21h</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="font-medium mb-3">Suivez-nous</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-600 hover:text-primary transition">
+                                    <i data-feather="facebook"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-primary transition">
+                                    <i data-feather="instagram"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-primary transition">
+                                    <i data-feather="twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-4">Envoyez-nous un message</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="name" class="block text-gray-700 mb-2">Nom complet</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 mb-2">Téléphone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-gray-700 mb-2">Sujet</label>
+                                <select id="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="">Sélectionnez un sujet</option>
+                                    <option value="quote">Demande de devis</option>
+                                    <option value="service">Question sur nos services</option>
+                                    <option value="booking">Réservation</option>
+                                    <option value="other">Autre</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-secondary transition flex items-center justify-center">
+                                <i data-feather="send" class="mr-2"></i> Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Zones desservies</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold mb-2">Montréal</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>Ville-Marie</li>
+                            <li>Le Plateau</li>
+                            <li>Rosemont</li>
+                            <li>Villeray</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold mb-2">Ouest-de-l'Île</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>Saint-Laurent</li>
+                            <li>DDO</li>
+                            <li>Pointe-Claire</li>
+                            <li>Kirkland</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold mb-2">Rive-Sud</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>Brossard</li>
+                            <li>Longueuil</li>
+                            <li>Saint-Lambert</li>
+                            <li>Boucherville</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold mb-2">Rive-Nord</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>Laval</li>
+                            <li>Repentigny</li>
+                            <li>Terrebonne</li>
+                            <li>Mascouche</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <p class="text-gray-600">Nous desservons également d'autres secteurs. Contactez-nous pour vérifier la disponibilité dans votre quartier.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Restez informés</h2>
+            <p class="max-w-2xl mx-auto mb-8">Abonnez-vous à notre infolettre pour recevoir des conseils de nettoyage, des offres spéciales et des promotions exclusives.</p>
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Votre email" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-800">
+                <button type="submit" class="bg-secondary px-6 py-3 rounded-r-lg font-medium hover:bg-blue-900 transition">
+                    S'abonner
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Chez Nous Propreté</h3>
+                    <p class="text-gray-400">Service de nettoyage professionnel résidentiel et commercial à Montréal et ses environs.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Nettoyage résidentiel</a></li>
+                        <li><a href="#" class="hover:text-white transition">Nettoyage commercial</a></li>
+                        <li><a href="#" class="hover:text-white transition">Airbnb & locations</a></li>
+                        <li><a href="#" class="hover:text-white transition">Après déménagement</a></li>
+                        <li><a href="#" class="hover:text-white transition">Après travaux</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Liens utiles</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">À propos</a></li>
+                        <li><a href="#" class="hover:text-white transition">Tarifs</a></li>
+                        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Légal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Conditions d'utilisation</a></li>
+                        <li><a href="#" class="hover:text-white transition">Politique de confidentialité</a></li>
+                        <li><a href="#" class="hover:text-white transition">Politique d'annulation</a></li>
+                        <li><a href="#" class="hover:text-white transition">Garantie de satisfaction</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2023 Chez Nous Propreté. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/15141234567" class="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition z-50">
+        <i data-feather="message-circle"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+
+</body>
+</html>
